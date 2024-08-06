@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.GroupBox l;
             this.label1 = new System.Windows.Forms.Label();
             this.txtRenda = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.txtTV = new System.Windows.Forms.TextBox();
             this.txtAlimentacao = new System.Windows.Forms.TextBox();
             this.txtOutros = new System.Windows.Forms.TextBox();
+            l = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,15 +66,6 @@
             this.txtRenda.Name = "txtRenda";
             this.txtRenda.Size = new System.Drawing.Size(357, 20);
             this.txtRenda.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Gastos";
             // 
             // label3
             // 
@@ -122,9 +114,9 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(58, 552);
+            this.btnCalcular.Location = new System.Drawing.Point(85, 552);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(90, 42);
             this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -132,21 +124,23 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(238, 552);
+            this.btnLimpar.Location = new System.Drawing.Point(375, 552);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(104, 42);
             this.btnLimpar.TabIndex = 9;
             this.btnLimpar.Text = "Novo Calculo";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnFechar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(414, 552);
+            this.btnFechar.Location = new System.Drawing.Point(414, 786);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 10;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // label8
             // 
@@ -160,7 +154,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(98, 692);
+            this.label9.Location = new System.Drawing.Point(98, 701);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 12;
@@ -217,6 +211,15 @@
             this.txtOutros.Size = new System.Drawing.Size(100, 20);
             this.txtOutros.TabIndex = 19;
             // 
+            // l
+            // 
+            l.Location = new System.Drawing.Point(44, 149);
+            l.Name = "l";
+            l.Size = new System.Drawing.Size(477, 397);
+            l.TabIndex = 20;
+            l.TabStop = false;
+            l.Text = "Gastos";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,9 +242,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtRenda);
             this.Controls.Add(this.label1);
+            this.Controls.Add(l);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -253,7 +256,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRenda;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

@@ -19,9 +19,38 @@ namespace PRJWindowsFormsExercicio001
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double n1 = double.Parse(txtEnergia.Text);
-            double n2 = double.Parse(txtAgua.Text);
+            double renda = double.Parse(txtRenda.Text);
+            double energia = double.Parse(txtEnergia.Text);
+            double agua = double.Parse(txtAgua.Text);
+            double tv = double.Parse(txtTV.Text);
+            double alimentacao = double.Parse(txtAlimentacao.Text);
+            double outros = double.Parse(txtOutros.Text);
+            double saldo = renda - (energia + agua + tv + alimentacao + outros);
+            double gasto = energia + agua + tv + alimentacao + outros;
 
+            lblGastos.Text = gasto.ToString("C");
+            lblSaldo.Text = saldo.ToString("C");
+
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtRenda.Clear();
+            txtEnergia.Clear();
+            txtAgua.Clear();
+            txtTV.Clear();
+            txtAlimentacao.Clear();
+            txtOutros.Clear();
+
+            lblSaldo.Text = "";
+            lblGastos.Text = "";
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
